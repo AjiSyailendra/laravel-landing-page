@@ -25,6 +25,10 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingpageController::class, 'index']);
 
+Route::get('/dashboard', function () {
+    return to_route('navbar');
+});
+
 Route::prefix('auth')->group(function () {
     Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
     Route::post('/login', [LoginController::class, 'authenticate'])->name('login.send');

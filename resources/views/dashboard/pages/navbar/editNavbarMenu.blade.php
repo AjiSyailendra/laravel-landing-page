@@ -27,7 +27,7 @@
                     </label>
                     <input name="menu_link" type="text" placeholder="Type here"
                         class="input input-bordered @error('menu_link') input-error @enderror w-full"
-                        value="{{ $data->menu_text }}" />
+                        value="{{ $data->menu_link }}" />
                     @error('menu_link')
                         <label class="label">
                             <span class="label-text-alt text-red-500">{{ $message }}</span>
